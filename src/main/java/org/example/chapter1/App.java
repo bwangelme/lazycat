@@ -1,17 +1,9 @@
-package org.example;
-
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerRecord;
-
-import java.util.Properties;
+package org.example.chapter1;
 
 /**
- * Hello world!
+ * Kafka Example
  */
 public class App {
-    public static final String brokerList = "localhost:9092";
-    public static final String topic = "lazycat";
-
     public static void main(String[] args) {
         String kind = args[0];
         if (kind.equals("producer")) {
