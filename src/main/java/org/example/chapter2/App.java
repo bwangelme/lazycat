@@ -5,8 +5,10 @@ public class App {
         String kind = args[0];
         if (kind.equals("producer")) {
             CatProducer p = new CatProducer();
-            Company c = Company.builder().name("douban").address("jiuxianqiao").build();
-            p.send(c);
+            Integer partition = 1;
+            String name = "douban " + partition.toString();
+            Company c = Company.builder().name(name).address("jiuxianqiao").build();
+            p.send(c, partition);
         } else if (kind.equals("consumer")) {
             CatConsumer consumer = new CatConsumer();
             consumer.consume();

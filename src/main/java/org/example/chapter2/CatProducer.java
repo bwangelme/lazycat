@@ -21,11 +21,11 @@ public class CatProducer {
         return properties;
     }
 
-    public static void send(Company company) {
+    public static void send(Company company, Integer partition) {
         Properties prop = initConfig();
 
         KafkaProducer<String, Company> producer = new KafkaProducer<>(prop);
-        ProducerRecord<String, Company> record = new ProducerRecord<>(topic, company);
+        ProducerRecord<String, Company> record = new ProducerRecord<>(topic, partition, "key", company);
 
         try {
             producer.send(record);
