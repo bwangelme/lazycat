@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class Producer {
     public static String brokerList = "localhost:9092";
-    public static String topic = "lazycat";
+    public static String topic = "cutecat";
 
     public static Properties initConfig() {
         Properties properties = new Properties();

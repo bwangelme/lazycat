@@ -1,12 +1,13 @@
 package org.example.chapter3;
 
 import org.apache.kafka.common.errors.SerializationException;
+import org.apache.kafka.common.serialization.Deserializer;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
 
-public class CatDeserializer {
+public class CatDeserializer implements Deserializer<Cat> {
     public void configure(Map<String, ?> var1, boolean var2) {
     }
 
