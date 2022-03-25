@@ -40,7 +40,7 @@ public class Consumer {
 
         while (true) {
             ConsumerRecords<String, Cat> records = consumer.poll(Duration.ofMillis(1000));
-            System.out.printf("Get records %s records\n", records.count());
+            System.out.printf("poll 拉取了 %s 条记录\n", records.count());
             if (records.isEmpty()) {
                 break;
             }
