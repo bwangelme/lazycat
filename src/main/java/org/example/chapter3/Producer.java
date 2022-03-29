@@ -21,7 +21,7 @@ public class Producer {
         return properties;
     }
 
-    public static void send(Cat cat, Integer partition) {
+    public void send(Cat cat, Integer partition) {
         Properties prop = initConfig();
 
         KafkaProducer<String, Cat> producer = new KafkaProducer<>(prop);

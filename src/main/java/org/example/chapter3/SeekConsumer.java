@@ -28,7 +28,7 @@ public class SeekConsumer {
         return properties;
     }
 
-    public static void consume() {
+    public void consume() {
         Properties p = initConfig();
         KafkaConsumer<String, Cat> consumer = new KafkaConsumer<>(p);
 
