@@ -67,6 +67,7 @@ public class CuteCatRangerConsumer {
     }
 
     public static void round_robin_consume() {
+        // TODO: 它的消费策略是怎样的，而且需要用多个 consumer 来验证
         Properties p = initConfig();
         PartitionAssignor assignmentStrategy = new RoundRobinAssignor();
         p.put(ConsumerConfig.PARTITION_ASSIGNMENT_STRATEGY_CONFIG, assignmentStrategy);
