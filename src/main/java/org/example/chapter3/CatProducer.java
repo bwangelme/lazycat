@@ -35,7 +35,7 @@ public class CatProducer {
 
         try {
             producer.send(record);
-            System.out.printf("Send cat %s Success\n", cat.getName());
+            System.out.printf("Send cat %s to %s Success\n", cat.getName(), partition);
         } catch (Exception e) {
             e.printStackTrace();
         }
