@@ -5,12 +5,11 @@ public class App {
         String kind = args[0];
         switch (kind) {
             case "producer": {
-                Producer p = new Producer();
+                CatProducer p = new CatProducer("localhost:9092", "angrycat");
                 Integer partition = 0;
-                String name = "xiaobai " + partition;
+                String name = "xiaobai " + partition.toString();
                 Cat c = Cat.builder().name(name).kind("cute").build();
                 p.send(c, partition);
-                break;
             }
             case "consumer":
                 Consumer consumer = new Consumer();
@@ -22,6 +21,5 @@ public class App {
                 break;
             }
         }
-
     }
 }

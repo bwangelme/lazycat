@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-class Cat {
+public class Cat {
     private String name;
     private String kind;
 }

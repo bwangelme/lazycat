@@ -5,9 +5,9 @@ public class App {
         String kind = args[0];
         if (kind.equals("producer")) {
             Integer partition = 1;
-            String name = "douban " + partition.toString();
+            String name = "douban " + partition;
             Company c = Company.builder().name(name).address("jiuxianqiao").build();
-            CatProducer.send(c, partition);
+            CompanyProducer.send(c, partition);
         } else if (kind.equals("consumer")) {
             CatConsumer.consume();
         }
