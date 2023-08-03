@@ -27,7 +27,7 @@ public class CuteCatRangerConsumer {
 
     /**
      * kafka 消费消息的默认策略是顺序遍历所有分区 RangeAssignor
-     *
+     * <p>
      * poll 拉取了 1 条记录
      * receive cat: Cat(name=大橘0号, kind=angry) @ partition 0
      * poll 拉取了 1 条记录
